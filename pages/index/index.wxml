@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<!--搜索功能-->
+  <view class='search'>
+    <form>
+      <input type='text' placeholder="搜索书籍" placeholder-class='placeholder_class'></input>
+    </form>
+  </view>
+<button class='UserInfo' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击授权</button>
+<block wx:else>
+  <view class='column'>
+    <swiper indicator-dots='{{true}}' indicator-color='#ccc' indicator-active-color='#f00' autoplay='{{true}}' circular='{{true}}' interval='2000' duration='500' style="height:{{height}} rpx;">
+      <swiper-item>
+        <image bindload='setContainerHeight' class='swiper' src='/images/index1.png' ></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='swiper' src='/images/index2.png'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='swiper' src='/images/index3.png'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+</block>
+
+<view class='container'>
+<!--首页的图书种类-->
+<view>
+  <view class='bookCategory'>
+    <view class='book'>
+      <image src='/images/book1.png' ></image>
+     
+      <image src='/images/book2.png' ></image>
+      
+      <image src='/images/book3.png' ></image>
+     
+      <image src='/images/book4.png' ></image>
+    
+      <image src='/images/book5.png' ></image>
+    </view>
+    <view class='label'>
+      <label>英语</label>
+      <label>语文</label>
+      <label>数学</label>
+      <label>计算机</label>  
+      <label>政治</label>
+    </view>
+    <view class='book'>
+      <image src='/images/book6.png' ></image>
+      
+      <image src='/images/book7.png' ></image>
+     
+      <image src='/images/book8.png' ></image>
+     
+      <image src='/images/book9.png' ></image>
+      
+      <image src='/images/book10.png' ></image>
+      
+    </view>
+    <view class='label'>
+      <label>物理</label>
+      <label>生物</label>
+      <label>化学</label>
+      <label>历史</label>
+      <label>其他</label>
+    </view>
+  </view>
+</view>
+<view class="title">
+      <text decode='{{true}}'>——&nbsp;&nbsp;今日推荐&nbsp;&nbsp;——</text>
+    </view>
+</view>

@@ -1,0 +1,21 @@
+<view class='container'>
+
+  <view class='header'>
+    <view class='my_image'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <view class='nickName'>
+      <text >{{userInfo.nickName}}</text>
+    </view>
+    
+    <view class='username'>
+      <text class='usernameText'>用户名:{{username}}</text>
+      <text class='identityText'style='display:{{identityDis}}' >身份:{{identity}}</text>
+    </view>
+    <view class='login' bindtap='login'>
+      <navigator url='/pages/login/login' style='display:{{login}}'>还没登录？点击登录/注册</navigator>
+    </view>
+
+  </view>
+  
+</view>

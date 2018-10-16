@@ -1,0 +1,101 @@
+<view class='container'>
+
+
+  <!-- 顶部 -->
+  <view class='header'>
+    <text class='text1'>
+    请补全账号信息或者登录已有账号，本公司承诺保障你的手机号码和账号信息隐私安全              </text>
+  </view>
+
+  <!--中间登录注册 -->
+  <view class='loginAndRegister'>
+    <view class='register'>
+      <image src="{{registersrc}}" class='registerImage' bindtap='registerSelected'></image>
+      <text class='registerText'>注册</text>
+    </view>
+    <view class='login'>
+      <image src='{{loginsrc}}' class='loginImage' bindtap='loginSelected'> </image>
+      <text class='loginText'>登录</text>
+    </view>
+  </view>
+
+
+  <!--输入电话号码进行注册-->
+  <view class='phoneRegister' style='display:{{register}}'>
+    <view class='RegisterView'>
+      <form bindsubmit='validatePhoneCode'>
+        <form bindsubmit='getPhoneCode'>
+          <input type='text' class='phone' placeholder='手机号码' name="phone"></input>
+          <input type='text' class='phone' placeholder='验证码' name="phoneCode"></input>
+          <button class='registerButton' formType="submit" type='default' style='display:{{getCode}}'>获取验证码</button>
+        </form>
+        <!--下一步按钮-->
+        <view class='nextStep'>
+          <!-- <image src='/images/nextStep.png' class='nextStep'></image> -->
+          <button form-type='submit' class='nextButton' style='display:{{nextStep}}'>下一步</button>
+          <!-- <input type='image'  bindtap='this.form.submit'>
+            <image src='/images/nextStep.png' class='nextStep'></image> 
+          </input> -->
+        </view>
+
+      </form>
+    </view>
+  </view>
+
+
+  <!-- 注册信息填写-->
+  <view class='registerInfo' style='display:{{registerInfo}}'>
+    <form bindsubmit='registerInfo'>
+      <text>设置密码</text>
+      <view class='essential'>
+        <input type='text' name="password1"></input>
+        <label class='flag'>*</label>
+      </view>
+      <text>确认密码</text>
+      <view class='essential'>
+        <input type='text' name="password2"></input>
+        <label class='flag'>*</label>
+      </view>
+      <text>请选择你的身份</text>
+      <view class='essential'>
+        <radio-group class="radio-group" bindchange="radioChange" name="choose">
+          <label class="radio" wx:for-items="{{identity}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </radio-group>
+
+        <label class='flag'>*</label>
+      </view>
+
+      <text>请输入你的昵称</text>
+      <input type='text' name="nickName" bindtap='nickName'></input>
+      <text>请填写你的微信号</text>
+      <input type='text' name="wechat" bindtap='wechat'></input>
+
+      <button form-type='submit' class='registerInfoButton'>注册</button>
+    </form>
+  </view>
+
+  <!-- 
+登录信息填写 -->
+
+  <view class='loginInfo' style='display:{{loginInfo}}'>
+    <form bindsubmit='loginInfo'>
+      <text>请选择你的身份</text>
+      <view class='radio'>
+        <radio-group class="radio-group" bindchange="radioChange" name="choose">
+          <label class="radio" wx:for-items="{{identity}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </radio-group>
+      </view>
+      <text></text>
+      <text>请输入你的账号</text>
+      <input type='text' name="phone" placeholder='电话号码'></input>
+      <text>请输入你的密码</text>
+      <input type='text' name="password" placeholder=''></input>
+      <button form-type='submit' class='loginInfoButton'>登录</button>
+    </form>
+
+  </view>
+</view>

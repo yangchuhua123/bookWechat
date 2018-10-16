@@ -1,0 +1,21 @@
+<view class='content_top'>
+    <image src='{{book.bookIcon}}' />
+</view>
+<view class='content_center'>
+    <view class='text'>{{book.bookName}}</view>
+    <view class='price'>
+      <view class='price_1'>￥{{book.bookPrice}}</view>
+
+    </view>
+    <!-- 
+    <view class='car_member'>
+       <image class='subtract'src='/images/add.png' />
+       <view class='car_amount'>0</view>
+       <image class='add' src='/images/subtract.png'/>
+    </view> -->
+</view>
+<view class='background'></view>
+<view class='product'>
+    <view class='product_top'>商品详情</view>
+     <view class='decription'>{{book.bookDescription}}</view>
+</view>

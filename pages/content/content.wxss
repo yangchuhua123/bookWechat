@@ -1,0 +1,56 @@
+/* pages/content/content.wxss */
+
+
+.content_center{
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+.content_center .text{
+
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 10px 10px;
+}
+.price{
+  height: 50px;
+  line-height: 50px;
+   float: left;
+}
+.price_1{
+  margin-left: 10px;
+  font-size: 18px;
+  color: orangered;
+  font-weight: bold;
+  float: left;
+}
+
+.background{
+  background: #eee;
+  height: 20rpx;
+}
+.product{
+  height: 200rpx;
+  width: 100%;
+}
+.product_top,.reliang,.decription{
+  margin: 0px 20px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 0 0 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+.yingyang{
+  margin: 0px 20px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 0 0 10px;
+}
+
+.product_top{
+   font-size: 16px;
+   font-weight: bold;
+}
+.reliang,.decription,.yingyang{
+  font-size: 14px;
+}

@@ -1,0 +1,37 @@
+<view class='category'>
+
+ <view class='search'>
+    <form bindsubmit='searchSomething'>
+        <view class='searchItem'>
+            <image src='/images/search.png' />
+            <input placeholder='请输入你想搜索的' name="like"></input>
+            
+        </view>
+        <button form-type='submit' class='searchButton'>搜索</button>
+      </form>
+      
+    </view>
+
+
+<!--商品展示-->
+  <scroll-view scroll-y="true"  scroll-into-view="{{toView}}" class="foods-wrapper" style='display:{{searchdispaly}}'>
+    <view wx:for="{{books}}" class="food-list food-list-hook" wx:for-index="parentIndex" bindtap='selectBook'>
+      <view class="content">
+        <view class="icon">
+              <image src="{{item.bookIcon}}" style="width: 100px;height: 100px"></image>
+          </view> 
+      <view class="other">
+        <view class="name">{{item.bookTitle}}</view>
+          <view class="now">￥{{item.bookPrice}}</view>  
+        </view>
+        </view>
+
+    </view>
+  </scroll-view>
+
+  <!--查询无果显示-->
+    <view class="title" style='display:{{searchdisplay}}'>
+      <text decode='{{true}}' >——&nbsp;&nbsp;未查询到商品&nbsp;&nbsp;——</text>
+    </view>
+
+  </view>
